@@ -1,20 +1,3 @@
-<?php
-session_start();
-
-if(isset($_SESSION['logon']) && $_SESSION['logon'] == True){ // sprawdzanie czy jestesmy zalogowani, jezeli tak to nie bedzie nam sie wyswietlal juz panel logowania, bo zostanie wykonane przekierowanie na panel po zalogowaniu
-    if($_SESSION['login'] == 'pracownik@gmail.com'){
-        header('Location: panel_pracownika.php');
-    }
-    else {
-        header('Location: panel_użytkownika.php');
-    }
-}
-?>
-<style>
-<?php include 'style.css'; ?>
-</style>
-
-<html>
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <title>Lombard</title>
@@ -26,7 +9,7 @@ if(isset($_SESSION['logon']) && $_SESSION['logon'] == True){ // sprawdzanie czy 
 </head>
 
 <div class="contact-box">
-    <form class="formu" method="post" action="logowanie.php">
+    <form class="formu" method="post">
         <h3>Zaloguj się</h3> 
         <input type="text" name="e-mail" placeholder="E-mail"/>
         <input type="password" name="haslo" placeholder="Hasło"/>
@@ -34,19 +17,10 @@ if(isset($_SESSION['logon']) && $_SESSION['logon'] == True){ // sprawdzanie czy 
     </form>
     <p>
     <input type="checkbox"><a href="">Zapamiętaj mnie</a><br><br>
-    <a href="rejestracja.php">Nie masz konta? Załóż je tutaj!</a><br><br>
+    <a href="rejestracja.html">Nie masz konta? Załóż je tutaj!</a><br><br>
     <a href="przypomnienie.html">Zapomniałeś hasła?</a>
     </p>
 <nav class="powrot">
-    <a href="index.html">Powrót</a>
+    <a href="index.php">Powrót</a>
 </nav>
 </div>
-<?php
-    if(isset($_SESSION['error'])){   // jesli istnieje zmienna sesyjna error, to wyswietla sie jej komunikat nastepnie usuwa ja zeby po odswiezeniu przegladarki blad zniknal
-        echo '<span style="color: red; font-weight: bold">'.$_SESSION['error'].'</span>';
-        unset($_SESSION['error']);
-    }
-?>
-
-</body>
-</html>

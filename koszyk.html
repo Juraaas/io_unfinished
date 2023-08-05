@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Lombard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body id="koszyk_b">
+<h2 id="order_h2">Koszyk</h2>
+<table id="order-table">
+    <tr>
+        <th>Przedmiot</th>
+        <th>Cena</th>
+        <th>Akcje</th>
+    </tr>
+    <tr>
+        <td onclick="">Gra PS5 Rayman Legends</td>
+        <td>200zł</td>
+        <td>
+        <button class="view-btn" onclick="">Usuń</button>
+        </td>
+    </tr>
+    <tr>
+        <td onclick="">Gra PC NFS</td>
+        <td>160zł</td>
+        <td>
+        <button class="view-btn" onclick="">Usuń</button>
+        </td>
+    </tr>
+    <tr>
+        <td onclick="">Konsola Xbox One X</td>
+        <td>2050zł</td>
+        <td>
+        <button class="view-btn" onclick="">Usuń</button>
+        </td>
+    </tr>
+    <tr>
+        <td onclick="">Pad Xbox</td>
+        <td>180zł</td>
+        <td>
+        <button class="view-btn" onclick="">Usuń</button>
+        </td>
+    </tr>
+    <tr>
+        <td onclick="">Pad Xbox</td>
+        <td>180zł</td>
+        <td>
+        <button class="view-btn" onclick="">Usuń</button>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+        <h3 id="checkout_sum">Suma: 2590zł</h3>
+        </td>
+    </tr>
+</table>
+<div class="checkout-buttons">
+    <h4 id="promo_code">Posiadasz kod promocyjny?</h4>
+    <input type="text" name="discount_code" placeholder="Tutaj wpisz kod promocyjny">
+    <input type="submit" class="form-btn" name="wyslij" value="Wprowadz">
+    <button class="view-btn2"><a id="checkout_anchor" href="checkout_order.html">Przejdz Dalej</a></button>
+</div>
+</body>
